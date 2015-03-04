@@ -1,0 +1,7 @@
+@media print {
+  /* line 4, ../../app/_scss/print.scss */
+  h1 {
+    color: red;
+    page-break-before: always;
+  }
+}
