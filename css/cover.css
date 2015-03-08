@@ -25,11 +25,15 @@ h1 {
 }
 /* line 25, ../../app/_scss/cover.scss */
 .cover h2 {
+  color: #999999;
   text-align: center;
+}
+/* line 30, ../../app/_scss/cover.scss */
+.cover .mb200 {
   margin-bottom: 200px;
 }
 
-/* line 31, ../../app/_scss/cover.scss */
+/* line 35, ../../app/_scss/cover.scss */
 .abstract {
   max-width: 400px;
   page-break-before: always;
