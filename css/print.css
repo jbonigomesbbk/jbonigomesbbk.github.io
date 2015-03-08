@@ -1,9 +1,9 @@
 @media print {
   /* line 4, ../../app/_scss/print.scss */
   body {
-    font-family: Helvetica, arial, sans-serif;
     font-size: 14px;
     line-height: 1.6;
+    font-family: Helvetica, arial, sans-serif;
   }
 
   /* line 10, ../../app/_scss/print.scss */
