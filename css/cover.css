@@ -23,8 +23,13 @@ h1 {
   font-weight: 300;
   text-align: center;
 }
+/* line 25, ../../app/_scss/cover.scss */
+.cover h2 {
+  text-align: center;
+}
 
-/* line 26, ../../app/_scss/cover.scss */
+/* line 30, ../../app/_scss/cover.scss */
 .abstract {
+  max-width: 400px;
   page-break-before: always;
 }
