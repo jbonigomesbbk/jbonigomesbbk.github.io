@@ -26,9 +26,10 @@ h1 {
 /* line 25, ../../app/_scss/cover.scss */
 .cover h2 {
   text-align: center;
+  margin-bottom: 200px;
 }
 
-/* line 30, ../../app/_scss/cover.scss */
+/* line 31, ../../app/_scss/cover.scss */
 .abstract {
   max-width: 400px;
   page-break-before: always;
