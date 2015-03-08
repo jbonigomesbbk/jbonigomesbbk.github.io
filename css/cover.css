@@ -26,18 +26,27 @@ h1 {
 /* line 25, ../../app/_scss/cover.scss */
 .cover h2 {
   color: #999999;
+  font-size: 16px;
   text-align: center;
 }
-/* line 30, ../../app/_scss/cover.scss */
+/* line 31, ../../app/_scss/cover.scss */
 .cover .centered {
   text-align: center;
 }
-/* line 34, ../../app/_scss/cover.scss */
+/* line 35, ../../app/_scss/cover.scss */
 .cover .mb50 {
   margin-bottom: 50px;
 }
-
 /* line 39, ../../app/_scss/cover.scss */
+.cover .mb100 {
+  margin-bottom: 100px;
+}
+/* line 43, ../../app/_scss/cover.scss */
+.cover .mt100 {
+  margin-top: 100px;
+}
+
+/* line 48, ../../app/_scss/cover.scss */
 .abstract {
   max-width: 400px;
   page-break-before: always;
