@@ -4,3 +4,8 @@ body {
   line-height: 1.6;
   font-family: Helvetica, arial, sans-serif;
 }
+
+/* line 7, ../../app/_scss/cover.scss */
+.abstract {
+  page-break-before: always;
+}
