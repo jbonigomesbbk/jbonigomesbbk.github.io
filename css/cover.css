@@ -6,6 +6,25 @@ body {
 }
 
 /* line 7, ../../app/_scss/cover.scss */
+h1 {
+  padding: 0;
+  cursor: text;
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  margin: 20px 0 10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 19, ../../app/_scss/cover.scss */
+.cover h1 {
+  font-size: 80px;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* line 26, ../../app/_scss/cover.scss */
 .abstract {
   page-break-before: always;
 }
