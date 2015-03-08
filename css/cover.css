@@ -29,11 +29,15 @@ h1 {
   text-align: center;
 }
 /* line 30, ../../app/_scss/cover.scss */
+.cover .centered {
+  text-align: center;
+}
+/* line 34, ../../app/_scss/cover.scss */
 .cover .mb50 {
   margin-bottom: 50px;
 }
 
-/* line 35, ../../app/_scss/cover.scss */
+/* line 39, ../../app/_scss/cover.scss */
 .abstract {
   max-width: 400px;
   page-break-before: always;
