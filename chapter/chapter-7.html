@@ -1,1 +1,102 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>IOU</title><meta name=viewport content="width=device-width"><link rel=stylesheet href=/css/main.4d2a.css></head><body><div class=docs><ul class=menu><li><a href=/docs class=menu-title>IOU Docs</a></li><li><a href=/chapter/chapter-1.html>Chapter 1</a></li><li><a href=/chapter/chapter-2.html>Chapter 2</a></li><li><a href=/chapter/chapter-3.html>Chapter 3</a></li><li><a href=/chapter/chapter-4.html>Chapter 4</a></li><li><a href=/chapter/chapter-5.html>Chapter 5</a></li><li><a href=/chapter/chapter-6.html>Chapter 6</a></li><li><a href=/chapter/chapter-7.html>Chapter 7</a></li><li><a href=/chapter/chapter-8.html>Chapter 8</a></li><li><a href=/chapter/chapter-9.html>Chapter 9</a></li><li><a href=/chapter/chapter-10.html>Chapter 10</a></li><li><a href=/pdf/index.pdf>Download PDF <i class="fa fa-download"></i></a></li></ul><div class=content><div class=padded><h1>Chapter 7</h1><h2>Review/Reflections</h2><p>reflect about usage of noSQL and how hard it was to make a transition between the relational world to Firebase.</p></div></div></div><script src=/js/scripts.df94.js></script></body></html>
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>IOU</title><meta name=viewport content="width=device-width"><link rel=stylesheet href=/css/main.4d2a.css></head><body><div class=docs><ul class=menu><li><a href=/docs class=menu-title>IOU Docs</a></li><li><a href=/chapter/chapter-1.html>Chapter 1</a></li><li><a href=/chapter/chapter-2.html>Chapter 2</a></li><li><a href=/chapter/chapter-3.html>Chapter 3</a></li><li><a href=/chapter/chapter-4.html>Chapter 4</a></li><li><a href=/chapter/chapter-5.html>Chapter 5</a></li><li><a href=/chapter/chapter-6.html>Chapter 6</a></li><li><a href=/chapter/chapter-7.html>Chapter 7</a></li><li><a href=/chapter/chapter-8.html>Chapter 8</a></li><li><a href=/chapter/chapter-9.html>Chapter 9</a></li><li><a href=/chapter/chapter-10.html>Chapter 10</a></li><li><a href=/pdf/index.pdf>Download PDF <i class="fa fa-download"></i></a></li></ul><div class=content><div class=padded><h1>Chapter 7</h1><h2>Review/Reflections</h2><p>reflect about usage of noSQL and how hard it was to make a transition between the relational world to Firebase.</p><p>the original structure:</p><div class=highlight><pre><code class=language-text data-lang=text>{
+  &quot;logs&quot; : {
+    &quot;123&quot; : {
+      &quot;bought&quot; : {
+        &quot;567&quot; : {
+          &quot;amended&quot; : true,
+          &quot;date&quot; : 1412635438623,
+          &quot;name&quot; : &quot;October&quot;,
+          &quot;owner&quot; : &quot;10152357995965379&quot;,
+          &quot;price&quot; : &quot;28&quot;
+        },
+        &quot;891&quot; : {
+          &quot;amended&quot; : false,
+          &quot;date&quot; : 1416851097157,
+          &quot;name&quot; : &quot;Top up&quot;,
+          &quot;owner&quot; : &quot;10152774088530030&quot;,
+          &quot;price&quot; : &quot;30.00&quot;
+        }
+      },
+      &quot;image&quot; : &quot;lightbulb&quot;,
+      &quot;members&quot; : {
+        &quot;444&quot; : true,
+        &quot;555&quot; : true
+      },
+      &quot;name&quot; : &quot;Electricity&quot;
+    },
+    &quot;234&quot; : {
+      &quot;bought&quot; : {
+        &quot;912&quot; : {
+          &quot;amended&quot; : false,
+          &quot;date&quot; : 1412635323357,
+          &quot;name&quot; : &quot;Salt&quot;,
+          &quot;owner&quot; : &quot;10201952652612125&quot;,
+          &quot;price&quot; : &quot;0.29&quot;
+        },
+        &quot;111&quot; : {
+          &quot;amended&quot; : true,
+          &quot;date&quot; : 1415408705349,
+          &quot;name&quot; : &quot;Kitchen roll X2&quot;,
+          &quot;owner&quot; : &quot;10152774088530030&quot;,
+          &quot;price&quot; : &quot;3.29&quot;
+        },
+      },
+      &quot;image&quot; : &quot;hazard&quot;,
+      &quot;members&quot; : {
+        &quot;444&quot; : true,
+        &quot;555&quot; : true
+      },
+      &quot;name&quot; : &quot;Household&quot;
+    }
+  },
+  &quot;users&quot; : {
+    &quot;444&quot; : {
+      &quot;.priority&quot; : &quot;444&quot;,
+      &quot;currency&quot; : &quot;£&quot;,
+      &quot;name&quot; : &quot;Jose Gomes&quot;
+    },
+    &quot;555&quot; : {
+      &quot;.priority&quot; : &quot;555&quot;,
+      &quot;currency&quot; : &quot;£&quot;,
+      &quot;name&quot; : &quot;Nik Grinkevich&quot;
+    },
+  }
+}
+</code></pre></div><p>The final structure:</p><div class=highlight><pre><code class=language-text data-lang=text>{
+  // rooms contains only meta info about each room
+  // stored under the room&#39;s unique ID
+  &quot;rooms&quot;: {
+    &quot;one&quot;: {
+      &quot;name&quot;: &quot;room alpha&quot;,
+      &quot;type&quot;: &quot;private&quot;
+    },
+    &quot;two&quot;: { ... },
+    &quot;three&quot;: { ... }
+  },
+
+  // room members are easily accessible (or restricted)
+  // we also store these by room ID
+  &quot;members&quot;: {
+    // we&#39;ll talk about indices like this below
+    &quot;one&quot;: {
+      &quot;mchen&quot;: true,
+      &quot;hmadi&quot;: true
+    },
+    &quot;two&quot;: { ... },
+    &quot;three&quot;: { ... }
+  },
+
+  // messages are separate from data we may want to iterate quickly
+  // but still easily paginated and queried, and organized by room ID
+  &quot;messages&quot;: {
+    &quot;one&quot;: {
+      &quot;m1&quot;: { &quot;sender&quot;: &quot;mchen&quot;, &quot;message&quot;: &quot;foo&quot; },
+      &quot;m2&quot;: { ... },
+      &quot;m3&quot;: { ... }
+    },
+    &quot;two&quot;: { ... },
+    &quot;three&quot;: { ... }
+  }
+}
+</code></pre></div><p>now the security rules can be written like this</p><div class=highlight><pre><code class=language-text data-lang=text>...
+</code></pre></div><p>Reflect about the facebook oAuth...</p></div></div></div><script src=/js/scripts.df94.js></script></body></html>
