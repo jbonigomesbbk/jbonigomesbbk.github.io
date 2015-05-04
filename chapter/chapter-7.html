@@ -156,8 +156,8 @@ $q.all(userswithnames).then(function(members) {
     &quot;.write&quot;: false,
     &quot;lists&quot;: {
       &quot;$list&quot; {
-        &quot;.read&quot;  : &quot;(root.child(&#39;members/&#39; + auth.uid).val() === auth.uid)&quot;,
-        &quot;.write&quot; : &quot;(root.child(&#39;members/&#39; + auth.uid).val() === auth.uid)&quot;,
+        &quot;.read&quot; : &quot;(root.child(&#39;members/&#39; + auth.uid).val() === auth.uid)&quot;,
+        &quot;.write&quot;: &quot;(root.child(&#39;members/&#39; + auth.uid).val() === auth.uid)&quot;,
       }
     }
   }
