@@ -4,9 +4,14 @@
     page-break-before: always;
   }
 
+  /* line 9, ../../app/_scss/print.scss */
+  p em {
+    display: block;
+  }
+
   /* line 14, ../../app/_scss/print.scss */
   body {
-    font-size: 14px;
+    font-size: 2em;
     line-height: 1.6;
     font-family: Helvetica, arial, sans-serif;
   }
