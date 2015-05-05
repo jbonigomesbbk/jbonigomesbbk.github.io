@@ -1,32 +1,33 @@
 @media print {
   /* line 4, ../../app/_scss/print.scss */
   .breakpage {
-    font-size: 18px;
+    zoom: 1.5;
+    font-size: 14px;
     page-break-before: always;
   }
 
-  /* line 10, ../../app/_scss/print.scss */
+  /* line 11, ../../app/_scss/print.scss */
   p em {
     display: block;
   }
 
-  /* line 15, ../../app/_scss/print.scss */
+  /* line 16, ../../app/_scss/print.scss */
   body {
     line-height: 1.6;
     font-family: Helvetica, arial, sans-serif;
   }
 
-  /* line 20, ../../app/_scss/print.scss */
+  /* line 21, ../../app/_scss/print.scss */
   a {
     color: #4183C4;
   }
 
-  /* line 24, ../../app/_scss/print.scss */
+  /* line 25, ../../app/_scss/print.scss */
   a.absent {
     color: #cc0000;
   }
 
-  /* line 28, ../../app/_scss/print.scss */
+  /* line 29, ../../app/_scss/print.scss */
   a.anchor {
     display: block;
     padding-left: 30px;
@@ -38,7 +39,7 @@
     bottom: 0;
   }
 
-  /* line 39, ../../app/_scss/print.scss */
+  /* line 40, ../../app/_scss/print.scss */
   h1, h2, h3, h4, h5, h6 {
     margin: 20px 0 10px;
     padding: 0;
@@ -48,76 +49,46 @@
     position: relative;
   }
 
-  /* line 48, ../../app/_scss/print.scss */
-  h1 tt, h1 code {
-    font-size: inherit;
-  }
-
-  /* line 52, ../../app/_scss/print.scss */
-  h2 tt, h2 code {
-    font-size: inherit;
-  }
-
-  /* line 56, ../../app/_scss/print.scss */
-  h3 tt, h3 code {
-    font-size: inherit;
-  }
-
-  /* line 60, ../../app/_scss/print.scss */
-  h4 tt, h4 code {
-    font-size: inherit;
-  }
-
-  /* line 64, ../../app/_scss/print.scss */
-  h5 tt, h5 code {
-    font-size: inherit;
-  }
-
-  /* line 68, ../../app/_scss/print.scss */
-  h6 tt, h6 code {
-    font-size: inherit;
-  }
-
-  /* line 72, ../../app/_scss/print.scss */
+  /* line 49, ../../app/_scss/print.scss */
   h1 {
-    font-size: 32px;
+    font-size: 28px;
     color: black;
   }
 
-  /* line 77, ../../app/_scss/print.scss */
+  /* line 54, ../../app/_scss/print.scss */
   h2 {
-    font-size: 28px;
+    font-size: 24px;
     border-bottom: 1px solid #cccccc;
     color: black;
   }
 
-  /* line 83, ../../app/_scss/print.scss */
+  /* line 60, ../../app/_scss/print.scss */
   h3 {
-    font-size: 22px;
-  }
-
-  /* line 87, ../../app/_scss/print.scss */
-  h4 {
-    font-size: 20px;
-  }
-
-  /* line 91, ../../app/_scss/print.scss */
-  h5 {
     font-size: 18px;
   }
 
-  /* line 95, ../../app/_scss/print.scss */
+  /* line 64, ../../app/_scss/print.scss */
+  h4 {
+    font-size: 16px;
+  }
+
+  /* line 68, ../../app/_scss/print.scss */
+  h5 {
+    font-size: 14px;
+  }
+
+  /* line 72, ../../app/_scss/print.scss */
   h6 {
     color: #777777;
-    font-size: 18px;
+    font-size: 14px;
   }
 
-  /* line 100, ../../app/_scss/print.scss */
+  /* line 77, ../../app/_scss/print.scss */
   p, blockquote, ul, ol, dl, li, table, pre {
     margin: 15px 0;
   }
 
-  /* line 104, ../../app/_scss/print.scss */
+  /* line 81, ../../app/_scss/print.scss */
   hr {
     background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
     border: 0 none;
@@ -126,130 +97,130 @@
     padding: 0;
   }
 
-  /* line 112, ../../app/_scss/print.scss */
+  /* line 89, ../../app/_scss/print.scss */
   body > h2:first-child {
     margin-top: 0;
     padding-top: 0;
   }
 
-  /* line 117, ../../app/_scss/print.scss */
+  /* line 94, ../../app/_scss/print.scss */
   body > h1:first-child {
     margin-top: 0;
     padding-top: 0;
   }
 
-  /* line 122, ../../app/_scss/print.scss */
+  /* line 99, ../../app/_scss/print.scss */
   body > h1:first-child + h2 {
     margin-top: 0;
     padding-top: 0;
   }
 
-  /* line 127, ../../app/_scss/print.scss */
+  /* line 104, ../../app/_scss/print.scss */
   body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
     margin-top: 0;
     padding-top: 0;
   }
 
-  /* line 132, ../../app/_scss/print.scss */
+  /* line 109, ../../app/_scss/print.scss */
   a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
     margin-top: 0;
     padding-top: 0;
   }
 
-  /* line 137, ../../app/_scss/print.scss */
+  /* line 114, ../../app/_scss/print.scss */
   h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
     margin-top: 0;
   }
 
-  /* line 141, ../../app/_scss/print.scss */
+  /* line 118, ../../app/_scss/print.scss */
   li p.first {
     display: inline-block;
   }
 
-  /* line 145, ../../app/_scss/print.scss */
+  /* line 122, ../../app/_scss/print.scss */
   li {
     margin: 0;
   }
 
-  /* line 149, ../../app/_scss/print.scss */
+  /* line 126, ../../app/_scss/print.scss */
   ul, ol {
     padding-left: 30px;
   }
 
-  /* line 153, ../../app/_scss/print.scss */
+  /* line 130, ../../app/_scss/print.scss */
   ul :first-child, ol :first-child {
     margin-top: 0;
   }
 
-  /* line 157, ../../app/_scss/print.scss */
+  /* line 134, ../../app/_scss/print.scss */
   dl {
     padding: 0;
   }
 
-  /* line 161, ../../app/_scss/print.scss */
+  /* line 138, ../../app/_scss/print.scss */
   dl dt {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     font-style: italic;
     padding: 0;
     margin: 15px 0 5px;
   }
 
-  /* line 169, ../../app/_scss/print.scss */
+  /* line 146, ../../app/_scss/print.scss */
   dl dt:first-child {
     padding: 0;
   }
 
-  /* line 173, ../../app/_scss/print.scss */
+  /* line 150, ../../app/_scss/print.scss */
   dl dt > :first-child {
     margin-top: 0;
   }
 
-  /* line 177, ../../app/_scss/print.scss */
+  /* line 154, ../../app/_scss/print.scss */
   dl dt > :last-child {
     margin-bottom: 0;
   }
 
-  /* line 181, ../../app/_scss/print.scss */
+  /* line 158, ../../app/_scss/print.scss */
   dl dd {
     margin: 0 0 15px;
     padding: 0 15px;
   }
 
-  /* line 186, ../../app/_scss/print.scss */
+  /* line 163, ../../app/_scss/print.scss */
   dl dd > :first-child {
     margin-top: 0;
   }
 
-  /* line 190, ../../app/_scss/print.scss */
+  /* line 167, ../../app/_scss/print.scss */
   dl dd > :last-child {
     margin-bottom: 0;
   }
 
-  /* line 194, ../../app/_scss/print.scss */
+  /* line 171, ../../app/_scss/print.scss */
   blockquote {
     border-left: 4px solid #dddddd;
     padding: 0 15px;
     color: #777777;
   }
 
-  /* line 199, ../../app/_scss/print.scss */
+  /* line 176, ../../app/_scss/print.scss */
   blockquote > :first-child {
     margin-top: 0;
   }
 
-  /* line 202, ../../app/_scss/print.scss */
+  /* line 179, ../../app/_scss/print.scss */
   blockquote > :last-child {
     margin-bottom: 0;
   }
 
-  /* line 206, ../../app/_scss/print.scss */
+  /* line 183, ../../app/_scss/print.scss */
   table {
     padding: 0;
     border-collapse: collapse;
   }
 
-  /* line 209, ../../app/_scss/print.scss */
+  /* line 186, ../../app/_scss/print.scss */
   table tr {
     border-top: 1px solid #cccccc;
     background-color: white;
@@ -257,12 +228,12 @@
     padding: 0;
   }
 
-  /* line 215, ../../app/_scss/print.scss */
+  /* line 192, ../../app/_scss/print.scss */
   table tr:nth-child(2n) {
     background-color: #f8f8f8;
   }
 
-  /* line 218, ../../app/_scss/print.scss */
+  /* line 195, ../../app/_scss/print.scss */
   table tr th {
     font-weight: bold;
     border: 1px solid #cccccc;
@@ -270,35 +241,35 @@
     padding: 6px 13px;
   }
 
-  /* line 224, ../../app/_scss/print.scss */
+  /* line 201, ../../app/_scss/print.scss */
   table tr td {
     border: 1px solid #cccccc;
     margin: 0;
     padding: 6px 13px;
   }
 
-  /* line 229, ../../app/_scss/print.scss */
+  /* line 206, ../../app/_scss/print.scss */
   table tr th :first-child, table tr td :first-child {
     margin-top: 0;
   }
 
-  /* line 232, ../../app/_scss/print.scss */
+  /* line 209, ../../app/_scss/print.scss */
   table tr th :last-child, table tr td :last-child {
     margin-bottom: 0;
   }
 
-  /* line 236, ../../app/_scss/print.scss */
+  /* line 213, ../../app/_scss/print.scss */
   img {
     max-width: 100%;
   }
 
-  /* line 240, ../../app/_scss/print.scss */
+  /* line 217, ../../app/_scss/print.scss */
   span.frame {
     display: block;
     overflow: hidden;
   }
 
-  /* line 244, ../../app/_scss/print.scss */
+  /* line 221, ../../app/_scss/print.scss */
   span.frame > span {
     border: 1px solid #dddddd;
     display: block;
@@ -309,13 +280,13 @@
     width: auto;
   }
 
-  /* line 253, ../../app/_scss/print.scss */
+  /* line 230, ../../app/_scss/print.scss */
   span.frame span img {
     display: block;
     float: left;
   }
 
-  /* line 257, ../../app/_scss/print.scss */
+  /* line 234, ../../app/_scss/print.scss */
   span.frame span span {
     clear: both;
     color: #333333;
@@ -323,14 +294,14 @@
     padding: 5px 0 0;
   }
 
-  /* line 263, ../../app/_scss/print.scss */
+  /* line 240, ../../app/_scss/print.scss */
   span.align-center {
     display: block;
     overflow: hidden;
     clear: both;
   }
 
-  /* line 268, ../../app/_scss/print.scss */
+  /* line 245, ../../app/_scss/print.scss */
   span.align-center > span {
     display: block;
     overflow: hidden;
@@ -338,20 +309,20 @@
     text-align: center;
   }
 
-  /* line 274, ../../app/_scss/print.scss */
+  /* line 251, ../../app/_scss/print.scss */
   span.align-center span img {
     margin: 0 auto;
     text-align: center;
   }
 
-  /* line 278, ../../app/_scss/print.scss */
+  /* line 255, ../../app/_scss/print.scss */
   span.align-right {
     display: block;
     overflow: hidden;
     clear: both;
   }
 
-  /* line 283, ../../app/_scss/print.scss */
+  /* line 260, ../../app/_scss/print.scss */
   span.align-right > span {
     display: block;
     overflow: hidden;
@@ -359,13 +330,13 @@
     text-align: right;
   }
 
-  /* line 289, ../../app/_scss/print.scss */
+  /* line 266, ../../app/_scss/print.scss */
   span.align-right span img {
     margin: 0;
     text-align: right;
   }
 
-  /* line 293, ../../app/_scss/print.scss */
+  /* line 270, ../../app/_scss/print.scss */
   span.float-left {
     display: block;
     margin-right: 13px;
@@ -373,12 +344,12 @@
     float: left;
   }
 
-  /* line 299, ../../app/_scss/print.scss */
+  /* line 276, ../../app/_scss/print.scss */
   span.float-left span {
     margin: 13px 0 0;
   }
 
-  /* line 302, ../../app/_scss/print.scss */
+  /* line 279, ../../app/_scss/print.scss */
   span.float-right {
     display: block;
     margin-left: 13px;
@@ -386,7 +357,7 @@
     float: right;
   }
 
-  /* line 308, ../../app/_scss/print.scss */
+  /* line 285, ../../app/_scss/print.scss */
   span.float-right > span {
     display: block;
     overflow: hidden;
@@ -394,7 +365,7 @@
     text-align: right;
   }
 
-  /* line 315, ../../app/_scss/print.scss */
+  /* line 292, ../../app/_scss/print.scss */
   code, tt {
     margin: 0 2px;
     padding: 0 5px;
@@ -404,7 +375,7 @@
     border-radius: 3px;
   }
 
-  /* line 324, ../../app/_scss/print.scss */
+  /* line 301, ../../app/_scss/print.scss */
   pre code {
     margin: 0;
     padding: 0;
@@ -413,52 +384,52 @@
     background: transparent;
   }
 
-  /* line 332, ../../app/_scss/print.scss */
+  /* line 309, ../../app/_scss/print.scss */
   .highlight pre {
     background-color: #f8f8f8;
     border: 1px solid #cccccc;
-    font-size: 17px;
+    font-size: 13px;
     line-height: 19px;
     overflow: auto;
     padding: 6px 10px;
     border-radius: 3px;
   }
 
-  /* line 342, ../../app/_scss/print.scss */
+  /* line 319, ../../app/_scss/print.scss */
   pre {
     background-color: #f8f8f8;
     border: 1px solid #cccccc;
-    font-size: 17px;
+    font-size: 13px;
     line-height: 19px;
     overflow: auto;
     padding: 6px 10px;
     border-radius: 3px;
   }
 
-  /* line 351, ../../app/_scss/print.scss */
+  /* line 328, ../../app/_scss/print.scss */
   pre code, pre tt {
     background-color: transparent;
     border: none;
   }
 
-  /* line 356, ../../app/_scss/print.scss */
+  /* line 333, ../../app/_scss/print.scss */
   sup {
     font-size: 0.83em;
     vertical-align: super;
     line-height: 0;
   }
 
-  /* line 361, ../../app/_scss/print.scss */
+  /* line 338, ../../app/_scss/print.scss */
   * {
     -webkit-print-color-adjust: exact;
   }
 
-  /* line 365, ../../app/_scss/print.scss */
+  /* line 342, ../../app/_scss/print.scss */
   table, pre {
     page-break-inside: avoid;
   }
 
-  /* line 369, ../../app/_scss/print.scss */
+  /* line 346, ../../app/_scss/print.scss */
   pre {
     word-wrap: break-word;
   }
