@@ -1,9 +1,4 @@
 @media print {
-  /* line 4, ../../app/_scss/print.scss */
-  .breakpage {
-    page-break-before: always;
-  }
-
   /* line 10, ../../app/_scss/print.scss */
   p em {
     display: block;
